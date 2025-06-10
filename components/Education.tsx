@@ -44,8 +44,8 @@ const Education = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Number.parseInt(entry.target.getAttribute("data-index"))
-            setVisibleItems((prev) => new Set([...prev, index]))
+            const index = Number.parseInt(entry.target.getAttribute("data-index") || "0")
+            setVisibleItems((prev) => new Set([...Array.from(prev), index]))
           }
         })
       },

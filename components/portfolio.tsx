@@ -120,7 +120,7 @@ const Portfolio = () => {
               <div
                 key={project.id}
                 className="h-full"
-                onMouseEnter={() => setActiveHover(project.id)}
+                onMouseEnter={() => setActiveHover(project.id as any)}
                 onMouseLeave={() => setActiveHover(null)}
               >
                 <div

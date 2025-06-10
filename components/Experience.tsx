@@ -62,7 +62,7 @@ const Experience = () => {
               <div
                 key={exp.id}
                 className="group cursor-pointer"
-                onMouseEnter={() => setActiveCard(exp.id)}
+                onMouseEnter={() => setActiveCard(exp.id as any)}
                 onMouseLeave={() => setActiveCard(null)}
               >
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 h-full hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all duration-200">

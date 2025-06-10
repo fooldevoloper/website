@@ -5,7 +5,7 @@ import Image from "next/image"
 import { BsFillMoonStarsFill, BsMedium } from "react-icons/bs"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 
-const Hero = ({ darkmode, setDarkmode }) => {
+const Hero = ({ darkmode, setDarkmode }:any) => {
   const [isVisible, setIsVisible] = useState(false)
   const [activeElement, setActiveElement] = useState(null)
   const [typedText, setTypedText] = useState("")
@@ -91,7 +91,7 @@ const Hero = ({ darkmode, setDarkmode }) => {
               <button
                 className="p-2 md:p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-xl md:text-2xl text-teal-600 dark:text-teal-400"
                 onClick={() => setDarkmode(!darkmode)}
-                onMouseEnter={() => setActiveElement("darkmode")}
+                onMouseEnter={() => setActiveElement("darkmode"  as any)}
                 onMouseLeave={() => setActiveElement(null)}
               >
                 <BsFillMoonStarsFill />
@@ -101,7 +101,7 @@ const Hero = ({ darkmode, setDarkmode }) => {
               <a
                 className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 hover:scale-105"
                 href="#"
-                onMouseEnter={() => setActiveElement("resume")}
+                onMouseEnter={() => setActiveElement("resume" as any)}
                 onMouseLeave={() => setActiveElement(null)}
               >
                 Resume
@@ -178,7 +178,7 @@ const Hero = ({ darkmode, setDarkmode }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`p-3 md:p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-2xl md:text-3xl text-gray-600 dark:text-gray-400 ${social.color} group relative`}
-                    onMouseEnter={() => setActiveElement(social.name)}
+                    onMouseEnter={() => setActiveElement(social.name as any)}
                     onMouseLeave={() => setActiveElement(null)}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
