@@ -15,8 +15,8 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
 
   // Typing animation effect
   useEffect(() => {
-    let timeout
-    const currentText = roles[currentRole]
+      let timeout: ReturnType<typeof setTimeout>
+      const currentText = roles[currentRole]
 
     if (typedText.length < currentText.length) {
       timeout = setTimeout(() => {
@@ -34,11 +34,11 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
 
   // Initial animation
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 300)
-    return () => clearTimeout(timer)
-  }, [])
+      const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
+        setIsVisible(true)
+      }, 300)
+      return () => clearTimeout(timer)
+    }, [])
 
   const socialLinks = [
     {
