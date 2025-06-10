@@ -2,10 +2,22 @@
 
 import { useState, useEffect } from "react"
 
-const Education = () => {
-  const [visibleItems, setVisibleItems] = useState(new Set())
+interface EducationItem {
+  id: number
+  year: string
+  title: string
+  institution: string
+  university?: string
+  duration: string
+  location: string
+  type: string
+  description: string
+}
 
-  const educationData = [
+const Education = () => {
+  const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set())
+
+  const educationData: EducationItem[] = [
     {
       id: 1,
       year: "2022",
@@ -41,18 +53,23 @@ const Education = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Number.parseInt(entry.target.getAttribute("data-index") || "0")
-            setVisibleItems((prev) => new Set([...Array.from(prev), index]))
+            const indexAttr = entry.target.getAttribute("data-index")
+            if (indexAttr !== null) {
+              const index = Number.parseInt(indexAttr, 10)
+              if (!isNaN(index)) {
+                setVisibleItems((prev) => new Set([...Array.from(prev), index]))
+              }
+            }
           }
         })
       },
       { threshold: 0.1 },
     )
 
-    const elements = document.querySelectorAll("[data-index]")
+    const elements = document.querySelectorAll<HTMLElement>("[data-index]")
     elements.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
