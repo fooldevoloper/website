@@ -14,8 +14,8 @@ const Experience = () => {
       year: "Feb 2024 - Present",
       status: "current",
       description: "Developing scalable web applications and contributing to innovative software solutions.",
-      skills: ["React", "Node.js", "TypeScript", "MongoDB"],
-      duration: "11 months",
+      skills: ["React", "Node.js", "TypeScript", "MongoDB", "Firebase", "GCF"],
+      duration: "1 yrs + 5 mos",
     },
     {
       id: 2,
@@ -25,8 +25,8 @@ const Experience = () => {
       year: "Jun 2023 - Dec 2023",
       status: "past",
       description: "Built robust backend systems and API integrations for freelancing platform.",
-      skills: ["Python", "Django", "PostgreSQL", "Redis"],
-      duration: "7 months",
+      skills: ["Nestjs", "SocketIO", "PostgreSQL", "AWS"],
+      duration: "6 months",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const Experience = () => {
       year: "2023 - 2024",
       status: "past",
       description: "Provided technical consultation and developed custom software solutions.",
-      skills: ["JavaScript", "React", "PHP", "MySQL"],
+      skills: ["JavaScript", "React", "NextJS", "Tailwind CSS"],
       duration: "1 year",
     },
   ]
@@ -71,9 +71,8 @@ const Experience = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <div
-                          className={`w-2 h-2 rounded-full ${
-                            exp.status === "current" ? "bg-green-500" : "bg-gray-400"
-                          }`}
+                          className={`w-2 h-2 rounded-full ${exp.status === "current" ? "bg-green-500" : "bg-gray-400"
+                            }`}
                         ></div>
                         <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                           {exp.status === "current" ? "Current" : "Previous"}
@@ -122,9 +121,8 @@ const Experience = () => {
 
                   {/* Hover Indicator */}
                   <div
-                    className={`mt-4 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-200 ${
-                      activeCard === exp.id ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`mt-4 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-200 ${activeCard === exp.id ? "opacity-100" : "opacity-0"
+                      }`}
                   ></div>
                 </div>
               </div>
