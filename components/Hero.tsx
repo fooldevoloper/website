@@ -5,7 +5,7 @@ import Image from "next/image"
 import { BsFillMoonStarsFill, BsMedium } from "react-icons/bs"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 
-const Hero = ({ darkmode, setDarkmode }:any) => {
+const Hero = ({ darkmode, setDarkmode }: any) => {
   const [isVisible, setIsVisible] = useState(false)
   const [activeElement, setActiveElement] = useState(null)
   const [typedText, setTypedText] = useState("")
@@ -15,8 +15,8 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
 
   // Typing animation effect
   useEffect(() => {
-      let timeout: ReturnType<typeof setTimeout>
-      const currentText = roles[currentRole]
+    let timeout: ReturnType<typeof setTimeout>
+    const currentText = roles[currentRole]
 
     if (typedText.length < currentText.length) {
       timeout = setTimeout(() => {
@@ -34,11 +34,11 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
 
   // Initial animation
   useEffect(() => {
-      const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
-        setIsVisible(true)
-      }, 300)
-      return () => clearTimeout(timer)
-    }, [])
+    const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
+      setIsVisible(true)
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [])
 
   const socialLinks = [
     {
@@ -73,9 +73,8 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
         {/* Navigation */}
         <nav className="py-6 md:py-10 mb-6 md:mb-12 flex justify-between items-center container max-w-screen-xl mx-auto px-4">
           <div
-            className={`transition-all duration-700 transform ${
-              isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
-            }`}
+            className={`transition-all duration-700 transform ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+              }`}
           >
             <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-gray-900 to-teal-600 dark:from-white dark:to-teal-400 bg-clip-text text-transparent">
               Balkrishna Pokharel
@@ -83,15 +82,14 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
           </div>
 
           <ul
-            className={`flex items-center gap-2 md:gap-4 transition-all duration-700 transform ${
-              isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-            }`}
+            className={`flex items-center gap-2 md:gap-4 transition-all duration-700 transform ${isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+              }`}
           >
             <li>
               <button
                 className="p-2 md:p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 text-xl md:text-2xl text-teal-600 dark:text-teal-400"
                 onClick={() => setDarkmode(!darkmode)}
-                onMouseEnter={() => setActiveElement("darkmode"  as any)}
+                onMouseEnter={() => setActiveElement("darkmode" as any)}
                 onMouseLeave={() => setActiveElement(null)}
               >
                 <BsFillMoonStarsFill />
@@ -114,9 +112,8 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
           <div className="flex flex-col items-center">
             {/* Hero Content */}
             <div
-              className={`text-center p-4 md:p-10 transition-all duration-1000 transform ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-              }`}
+              className={`text-center p-4 md:p-0 transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100 md:p-0" : "translate-y-12 opacity-0"
+                }`}
             >
               {/* Greeting */}
               <div className="mb-4 md:mb-8">
@@ -144,7 +141,7 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
                 </p>
 
                 {/* Additional Info Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
                   <div className="bg-white dark:bg-gray-800 p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <div className="text-2xl md:text-3xl mb-2">🚀</div>
                     <div className="font-semibold text-gray-900 dark:text-white">Fast Development</div>
@@ -160,15 +157,14 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
                     <div className="font-semibold text-gray-900 dark:text-white">Results</div>
                     <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400">Quality focused</div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Social Links */}
             <div
-              className={`transition-all duration-1000 transform delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-              }`}
+              className={`transition-all duration-1000 transform delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+                }`}
             >
               <div className="flex justify-center gap-4 md:gap-6 mb-8 md:mb-12">
                 {socialLinks.map((social, index) => (
@@ -195,9 +191,8 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
 
             {/* Profile Image */}
             <div
-              className={`transition-all duration-1000 transform delay-1000 ${
-                isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
-              }`}
+              className={`transition-all duration-1000 transform delay-1000 ${isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                }`}
             >
               <div className="relative group">
                 {/* Animated Rings */}
@@ -228,9 +223,8 @@ const Hero = ({ darkmode, setDarkmode }:any) => {
 
             {/* Call to Action */}
             <div
-              className={`mt-10 md:mt-16 transition-all duration-1000 transform delay-1200 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-              }`}
+              className={`mt-10 mb-4 md:mt-16 transition-all duration-1000 transform delay-1200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                }`}
             >
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 hover:scale-105">

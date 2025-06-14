@@ -24,9 +24,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="bg-white dark:bg-gray-900">
-          <div className="px-10 md:px-20 lg:px-40">
-            <Hero darkmode={darkmode} setDarkmode={setDarkmode} />
-          </div>
+          <Hero darkmode={darkmode} setDarkmode={setDarkmode} />
           <Portfolio />
           <Experience />
           <Education />

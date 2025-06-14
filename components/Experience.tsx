@@ -14,8 +14,8 @@ const Experience = () => {
       year: "Feb 2024 - Present",
       status: "current",
       description: "Developing scalable web applications and contributing to innovative software solutions.",
-      skills: ["React", "Node.js", "TypeScript", "MongoDB"],
-      duration: "11 months",
+      skills: ["Node.js", "Mongodb", "Firebase", "Elastic Search"],
+      duration: "1 yrs + 5 mos",
     },
     {
       id: 2,
@@ -25,8 +25,8 @@ const Experience = () => {
       year: "Jun 2023 - Dec 2023",
       status: "past",
       description: "Built robust backend systems and API integrations for freelancing platform.",
-      skills: ["Python", "Django", "PostgreSQL", "Redis"],
-      duration: "7 months",
+      skills: ["Nestjs", "SocketIO", "PostgreSQL", "Docker"],
+      duration: "6 months",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const Experience = () => {
       year: "2023 - 2024",
       status: "past",
       description: "Provided technical consultation and developed custom software solutions.",
-      skills: ["JavaScript", "React", "PHP", "MySQL"],
+      skills: ["NextJS", "Tailwind CSS", "Figma"],
       duration: "1 year",
     },
   ]
@@ -71,9 +71,8 @@ const Experience = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <div
-                          className={`w-2 h-2 rounded-full ${
-                            exp.status === "current" ? "bg-green-500" : "bg-gray-400"
-                          }`}
+                          className={`w-2 h-2 rounded-full ${exp.status === "current" ? "bg-green-500" : "bg-gray-400"
+                            }`}
                         ></div>
                         <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                           {exp.status === "current" ? "Current" : "Previous"}
@@ -122,9 +121,8 @@ const Experience = () => {
 
                   {/* Hover Indicator */}
                   <div
-                    className={`mt-4 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-200 ${
-                      activeCard === exp.id ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`mt-4 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-200 ${activeCard === exp.id ? "opacity-100" : "opacity-0"
+                      }`}
                   ></div>
                 </div>
               </div>
@@ -161,7 +159,7 @@ const Experience = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Frontend</h4>
                 <div className="flex flex-wrap gap-1">
-                  {["React", "TypeScript", "JavaScript"].map((skill) => (
+                  {["React", "Next JS",].map((skill) => (
                     <span
                       key={skill}
                       className="text-xs px-2 py-1 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 text-teal-700 dark:text-teal-300 rounded border border-teal-200 dark:border-teal-700"
@@ -174,7 +172,7 @@ const Experience = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Backend</h4>
                 <div className="flex flex-wrap gap-1">
-                  {["Node.js", "Python", "Django", "PHP"].map((skill) => (
+                  {["Node.js", "Firebase", "Elastic Search"].map((skill) => (
                     <span
                       key={skill}
                       className="text-xs px-2 py-1 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 text-teal-700 dark:text-teal-300 rounded border border-teal-200 dark:border-teal-700"
@@ -187,7 +185,7 @@ const Experience = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Database</h4>
                 <div className="flex flex-wrap gap-1">
-                  {["MongoDB", "PostgreSQL", "MySQL", "Redis"].map((skill) => (
+                  {["MongoDB", "PostgreSQL", "Firestore", "Redis"].map((skill) => (
                     <span
                       key={skill}
                       className="text-xs px-2 py-1 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 text-teal-700 dark:text-teal-300 rounded border border-teal-200 dark:border-teal-700"
