@@ -112,7 +112,7 @@ const Hero = ({ darkmode, setDarkmode }: any) => {
           <div className="flex flex-col items-center">
             {/* Hero Content */}
             <div
-              className={`text-center p-4 md:p-10 transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100 md:p-0" : "translate-y-12 opacity-0"
+              className={`text-center p-4 md:p-0 transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100 md:p-0" : "translate-y-12 opacity-0"
                 }`}
             >
               {/* Greeting */}
