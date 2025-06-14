@@ -14,7 +14,7 @@ const Experience = () => {
       year: "Feb 2024 - Present",
       status: "current",
       description: "Developing scalable web applications and contributing to innovative software solutions.",
-      skills: ["React", "Node.js", "TypeScript", "MongoDB", "Firebase", "GCF"],
+      skills: ["Node.js", "Mongodb", "Firebase", "Elastic Search"],
       duration: "1 yrs + 5 mos",
     },
     {
@@ -25,7 +25,7 @@ const Experience = () => {
       year: "Jun 2023 - Dec 2023",
       status: "past",
       description: "Built robust backend systems and API integrations for freelancing platform.",
-      skills: ["Nestjs", "SocketIO", "PostgreSQL", "AWS"],
+      skills: ["Nestjs", "SocketIO", "PostgreSQL", "Docker"],
       duration: "6 months",
     },
     {
@@ -36,7 +36,7 @@ const Experience = () => {
       year: "2023 - 2024",
       status: "past",
       description: "Provided technical consultation and developed custom software solutions.",
-      skills: ["JavaScript", "React", "NextJS", "Tailwind CSS"],
+      skills: ["NextJS", "Tailwind CSS", "Figma"],
       duration: "1 year",
     },
   ]
@@ -159,7 +159,7 @@ const Experience = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Frontend</h4>
                 <div className="flex flex-wrap gap-1">
-                  {["React", "TypeScript", "JavaScript"].map((skill) => (
+                  {["React", "Next JS",].map((skill) => (
                     <span
                       key={skill}
                       className="text-xs px-2 py-1 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 text-teal-700 dark:text-teal-300 rounded border border-teal-200 dark:border-teal-700"
@@ -172,7 +172,7 @@ const Experience = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Backend</h4>
                 <div className="flex flex-wrap gap-1">
-                  {["Node.js", "Python", "Django", "PHP"].map((skill) => (
+                  {["Node.js", "Firebase", "Elastic Search"].map((skill) => (
                     <span
                       key={skill}
                       className="text-xs px-2 py-1 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 text-teal-700 dark:text-teal-300 rounded border border-teal-200 dark:border-teal-700"
@@ -185,7 +185,7 @@ const Experience = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Database</h4>
                 <div className="flex flex-wrap gap-1">
-                  {["MongoDB", "PostgreSQL", "MySQL", "Redis"].map((skill) => (
+                  {["MongoDB", "PostgreSQL", "Firestore", "Redis"].map((skill) => (
                     <span
                       key={skill}
                       className="text-xs px-2 py-1 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 text-teal-700 dark:text-teal-300 rounded border border-teal-200 dark:border-teal-700"
