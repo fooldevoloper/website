@@ -11,7 +11,7 @@ const Hero = ({ darkmode, setDarkmode }: any) => {
   const [typedText, setTypedText] = useState("")
   const [currentRole, setCurrentRole] = useState(0)
 
-  const roles = ["Full Stack Developer", "Software Engineer", "Problem Solver", "Tech Enthusiast"]
+  const roles = ["Full Stack Developer", "Software Engineer", "Problem Solver", "Backend Developer"]
 
   // Typing animation effect
   useEffect(() => {
