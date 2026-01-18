@@ -12,7 +12,7 @@ const Portfolio = () => {
       description: "A project to visualize and manage family relationships.",
       longDescription:
         "An interactive family tree application built with modern web technologies, featuring dynamic relationship mapping and intuitive navigation.",
-      url: "https://family-tree-eight.vercel.app/",
+      url: "https://family-tree-app-ivory.vercel.app/",
       category: "Web Application",
       tech: ["React", "JavaScript", "CSS", "Vercel"],
       status: "Live",

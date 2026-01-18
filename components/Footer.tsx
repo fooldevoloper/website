@@ -131,9 +131,10 @@ const Footer: React.FC = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center mb-4 md:mb-0">
                             <div className="w-2 h-2 bg-teal-500 rounded-full mr-2"></div>
-                            <p className="text-sm text-gray-600 dark:text-gray-300">
-                                © 2024 Balkrishna Pokharel. All rights reserved.
-                            </p>
+                         <p className="text-sm text-gray-600 dark:text-gray-300">
+                            © {new Date(Date.now()).getFullYear()} Balkrishna Pokharel. All rights reserved.
+                                </p>
+
                         </div>
                         <div className="flex items-center gap-6">
                             <a
